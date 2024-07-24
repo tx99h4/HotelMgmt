@@ -1,0 +1,30 @@
+﻿<Window x:Class="Hotel_Manager.newClientFrm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nouveau client.." Height="337" Width="525" AllowsTransparency="False" Icon="/Hotel_Manager;component/Images/hotel.png" ResizeMode="CanMinimize">
+    <Grid Background="#29000000">
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="120,32,0,0" Name="nameTxt" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="120,65,0,0" Name="givenameTxt" VerticalAlignment="Top" Width="120" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="120,131,0,0" Name="birthdateDtp" VerticalAlignment="Top" Width="120" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="120,184,0,0" Name="idtypeLst" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <ComboBoxItem Content="CIN" />
+            <ComboBoxItem Content="Passport" />
+            <ComboBoxItem Content="Titre de séjour" />
+        </ComboBox>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="120,215,0,0" Name="idnumberTxt" VerticalAlignment="Top" Width="120" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="368,32,0,0" Name="roomLst" VerticalAlignment="Top" Width="54" ItemsSource="{Binding}" SelectedIndex="-1"></ComboBox>
+        <Label Content="Nom" Height="28" HorizontalAlignment="Left" Margin="22,33,0,0" Name="nameLbl" VerticalAlignment="Top" />
+        <Label Content="Prénom" Height="28" HorizontalAlignment="Left" Margin="22,65,0,0" Name="prenomLbl" VerticalAlignment="Top" />
+        <Label Content="Nationalité" Height="28" HorizontalAlignment="Left" Margin="22,98,0,0" Name="nationalityLbl" VerticalAlignment="Top" />
+        <Label Content="Date de naissance" Height="28" HorizontalAlignment="Left" Margin="22,131,0,0" Name="birthdateLbl" VerticalAlignment="Top" />
+        <Label Content="Date d'arrivée" Height="28" HorizontalAlignment="Left" Margin="279,184,0,0" Name="checkindateLbl" VerticalAlignment="Top" />
+        <Label Content="Pièce d'identité" Height="28" HorizontalAlignment="Left" Margin="22,184,0,0" Name="idtypeLbl" VerticalAlignment="Top" />
+        <Label Content="No. pièce" Height="28" HorizontalAlignment="Left" Margin="22,213,0,0" Name="idnumberLbl" VerticalAlignment="Top" />
+        <Label Content="Chambre libre" Height="28" HorizontalAlignment="Left" Margin="279,32,0,0" Name="roomnumberLbl" VerticalAlignment="Top" />
+        <Button Content="Annuler" Height="23" HorizontalAlignment="Left" Margin="416,259,0,0" Name="cancelBtn" VerticalAlignment="Top" Width="75" Click="cancelBtn_Click" />
+        <Button Content="Ajouter" Height="23" HorizontalAlignment="Left" Margin="326,259,0,0" Name="saveclientBtn" VerticalAlignment="Top" Width="75" Click="saveclientBtn_Click" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="368,185,0,0" Name="checkindateDtp" VerticalAlignment="Top" Width="115" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="120,98,0,0" Name="nationalityLst" VerticalAlignment="Top" Width="120" ItemsSource="{Binding}" />
+        <CheckBox Content="N'afficher que les chambres libres" Height="16" HorizontalAlignment="Left" Margin="279,70,0,0" Name="freeRoomChk" VerticalAlignment="Top" Checked="freeRoomChk_Checked" Unchecked="freeRoomChk_Unchecked" IsChecked="False" />
+    </Grid>
+</Window>

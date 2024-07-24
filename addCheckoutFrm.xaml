@@ -1,0 +1,13 @@
+﻿<Window x:Class="Hotel_Manager.addCheckoutFrm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Saisir checkout.." Height="225" Width="300" Icon="/Hotel_Manager;component/Images/hotel.png" ResizeMode="CanMinimize">
+    <Grid Background="#29000000">
+        <Label Content="Date de départ" HorizontalAlignment="Left" Margin="38,75,0,85" Name="checkoutdateLbl" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="127,76,0,0" Name="checkoutdateDtp" VerticalAlignment="Top" Width="115" />
+        <ComboBox Height="23" HorizontalAlignment="Right" ItemsSource="{Binding}" Margin="0,26,97,0" Name="busyRoomLst" SelectedIndex="0" VerticalAlignment="Top" Width="54" />
+        <Label Content="Chambre No." Height="28" HorizontalAlignment="Left" Margin="38,26,0,0" Name="roomNoLbl" VerticalAlignment="Top" />
+        <Button Content="Annuler" Height="23" HorizontalAlignment="Left" Margin="167,137,0,0" Name="cancelCheckoutBtn" VerticalAlignment="Top" Width="75" Click="cancelCheckoutBtn_Click" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="77,137,0,0" Name="savecheckoutBtn" VerticalAlignment="Top" Width="75" Click="savecheckoutBtn_Click" />
+    </Grid>
+</Window>
